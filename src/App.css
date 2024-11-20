@@ -5,9 +5,9 @@
   font-family: 'PT Sans', sans-serif;
 }
 
-.home,
-.services,
-.articles
+.home
+/* .services, */
+/* .articles */
  {
   display: flex;
   height: 90vh;
@@ -16,23 +16,23 @@
   font-size: 3rem;
 }
 
-.services {
+/* .services {
   background-image: url('../public/images/img-home.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   color: #fff;
   font-size: 100px;
-}
+} */
 
-.articles {
-  background-image: url('../public/images/img-9.jpg');
-  background-position: center;
+/* .articles { */
+  /* background-image: url('../public/images/img-9.jpg'); */
+  /* background-position: center;
   background-size: fill;
   background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
-}
+  color: #242424; */
+  /* font-size: 50px; */
+/* } */
 
 .sign-up {
   /* background-image: url('../public/images/img-7.jpg'); */
@@ -44,4 +44,91 @@
   margin-top: 50px;
   margin-bottom: 50px;
   /* height: 50vh;  */
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Optional: To center the content and limit its width */
+  margin: 0 auto;
+  position: relative; /* Ensure absolute positioning of the dropdown works */
+}
+
+.search-bar {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  position: relative; /* Add position relative to ensure dropdown positions correctly */
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.search-bar input:focus {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-color: #007bff;
+}
+
+.articles{
+  font-size: 2rem;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+/* Styling the dropdown */
+.autocomplete-dropdown {
+  position: absolute;
+  top: 100%; /* Positioned right below the search input */
+  left: 0;
+  width: 100%;
+  background: white; /* Change to white for better visibility */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 10; /* Ensure dropdown is on top */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.autocomplete-dropdown li {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.autocomplete-dropdown li:hover {
+  background-color: #f0f0f0; /* Light hover effect */
+}
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .search-bar {
+    max-width: 70%; /* Ensure it uses full width on smaller screens */
+    padding: 20px; /* Remove extra padding */
+  }
+
+  .search-bar input {
+    font-size: 0.9rem; /* Slightly smaller font for better fit */
+    padding: 10px 12px; /* Adjust padding for smaller input */
+  }
+}
+
+@media (max-width: 480px) {
+  .search-bar input {
+    font-size: 0.85rem; /* Further adjust font size for very small screens */
+    padding: 10px 12px; /* Reduce padding for a compact look */
+  }
 }
