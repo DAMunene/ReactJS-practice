@@ -1,0 +1,113 @@
+.form-container {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 300px;
+
+}
+.form-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Align form fields vertically */
+    align-items: center;  /* Center form fields horizontally */
+    width: 100%;  /* Ensure the form takes full width */
+}
+.form-field {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.email-label{
+    margin-bottom: 5px;
+    font-weight: bold;
+    
+}
+.input-field {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%; /* Ensure input fields take full width */
+}
+.form-message{
+    margin-top: 10px;
+    font-size: 14px;
+    color: green;
+}
+.text-danger{
+    color: red;
+}
+.btn--secondary {
+    border-radius: 4px;
+    margin-top: 20px;  /* Space above the button */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 10px 20px; /* Adjust button padding */
+    display: inline-flex; /* Makes the button a flex container */
+    justify-content: center; /* Center the button content horizontally */
+    align-items: center; /* Center the button content vertically */
+    text-align: center; /* Ensure the text is centered */
+    width: auto; /* Set the button width to auto (adjust based on content) */
+}
+.card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    max-width: 500px;
+    width: 200%;  /* Responsive width */
+    margin: 50px auto;  /* Center the card horizontally */
+    display: flex;  /* Enable flexbox */
+    flex-direction: column;  /* Arrange children (form, header, button) vertically */
+    justify-content: center;  /* Center content vertically inside the card */
+    align-items: center;  /* Center content horizontally inside the card */
+}
+.card-header{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+@media (max-width: 600px) {
+    .form-container {
+        width: 100%; /* Full-width on small screens */
+        padding: 0 15px; /* Add horizontal padding */
+    }
+
+    .card {
+        width: 100%; /* Full-width card */
+        padding: 15px; /* Reduce padding */
+        margin: 20px auto; /* Reduce vertical margin */
+    }
+
+    .card-header {
+        font-size: 20px; /* Slightly smaller font */
+    }
+
+    .input-field {
+        font-size: 14px; /* Adjust input text size */
+        padding: 6px; /* Smaller padding for inputs */
+    }
+
+    .form-message {
+        font-size: 12px; /* Smaller text for messages */
+    }
+
+    .btn--secondary {
+        padding: 10px 15px; /* Adjust button size */
+        font-size: 14px;
+    }
+}
+
+/* Tablet responsiveness */
+@media (max-width: 768px) {
+    .card {
+        max-width: 400px; /* Slightly smaller card width */
+    }
+
+    .card-header {
+        font-size: 22px; /* Slightly smaller text */
+    }
+}
